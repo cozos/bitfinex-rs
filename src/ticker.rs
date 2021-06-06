@@ -67,7 +67,7 @@ impl Ticker {
         Ok(ticker)
     }
 
-    pub fn all_tickers<S>(&self) -> Result<Vec<TradingPair>> {
+    pub fn all_tickers<>(&self) -> Result<Vec<TradingPair>> {
         let endpoint: String = format!("tickers?symbols=ALL");
         let data = self.client.get(endpoint, String::new())?;
 
